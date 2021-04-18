@@ -1,0 +1,9 @@
+#bloc-erreur h1{
+	border-bottom:3px solid red;font:24px sans-serif;color:red;
+}
+#bloc-erreur img, #bloc-erreur p{display:inline-block;vertical-align:top;}
+#bloc-erreur img{
+	width:15%;
+}
+#bloc-erreur p{width:83%text-indent:10px;font:22px calibri;}
+#bloc-erreur a{display:block;margin-top:5px;color:blue;}

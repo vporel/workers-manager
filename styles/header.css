@@ -1,0 +1,49 @@
+header{ 
+	height:60px;width:100%;position: sticky;top:0;border-bottom:3px solid white;
+	z-index:10;background:rgb(0,150,255);
+}
+header>div{display:inline-block;height:100%;vertical-align:top;}
+header #links-header{
+	width:10%;background:rgb(0,150,255);
+}
+header .parent{display:none;}
+	header #derouler img{width:70px;height:60px;cursor:pointer;}
+	header #derouler {margin-left:10px;display:block;}
+	header #links-header span{display:block;}
+	header #links-header .parent{display:none;padding:5px 0;padding-left:5px;font:19px sans-serif;}
+	header #links-header .enfant{padding:2px 0;padding-left:20px;font:17px sans-serif;}
+	header #links-header a{text-decoration:none;color:white;cursor:pointer;}
+	header #links-header a:hover{
+		color:rgb(0,150,255);
+		text-shadow:1px 1px 0 white,-1px -1px 0 white,1px -1px 0 white,-1px 1px 0 white;}
+header #text{width:65%;}
+header h2{margin:15px 0;color:rgb(0,150,255);font:bold 25px calibri;letter-spacing: 2px;
+		text-shadow:0 1px 0 white,1px 1px 0 white,0 -1px 0 white,-1px -1px 0 white,1px 0 0 white,-1px 0 0 white,1px -1px 0 white,-1px 1px 0 white,
+		0 2px 0 white,0 -2px 0 white,2px 0 0 white,-2px 0 0 white,2px 2px 0 white,2px -2px 0 white,-2px 2px 0 white,-2px -2px 0 white,
+		0 3px 0 white,0 -3px 0 white,3px 0 0 white,-3px 0 0 white,3px -3px 0 white,-3px 3px 0 white;}
+header #last{width:25%;position:absolute;right:0;}
+header #last>div{display:inline-block;height:100%;vertical-align:top;}
+header #last .barre{width:2px;height:80%;margin:2.5% 5px 0 5px;background:white;}
+header #last #user span{display:inline-block;}
+	header #last #img{font:bold 28px arial black;border-radius:50%;
+		padding:10px 13px;margin-top:2px;border:2px solid white;background:lightgray;
+		color:white;text-shadow: 0 0 1px black;}
+	header #last #nom{font:bold 16px sans-serif;color:white;}
+		header #last a{text-decoration:none;font-weight:normal;color:white;}
+header #quit img{height:65%;margin-top:35%;}
+
+#cover-charge{
+	position:fixed;z-index:30;background:rgba(0,0,0,.7);width:100%;height:100%;
+	top:0;left:0;display:none;
+}
+#cover-charge .tourne{
+	position:absolute;width:100px;height:100px;border:10px solid transparent;
+	border-radius:50%;animation-name: tourne;animation-iteration-count: infinite;
+	animation-timing-function: linear;top:40%;left:45%;
+}
+#cover-charge #tourne1{
+	border-top-color:white;animation-duration: 1.5s;
+}
+#cover-charge #tourne2{
+	border-bottom-color:rgba(255,255,255,.4);animation-duration: 1s;
+}

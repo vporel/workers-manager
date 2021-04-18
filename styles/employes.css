@@ -1,0 +1,240 @@
+
+
+/* PAGE D'AJOUT */
+	#ajouter{width:96%;margin: 5px auto;}
+	#ajouter fieldset{display:inline-block;width:46.5%;vertical-align: top;}
+	#ajouter fieldset span{display:block;width:94%;margin-left:2%;margin-top:5px;}
+	#ajouter #select_type{width:100%;}
+	#ajouter fieldset span label{display:block;width:100%;font:100% calibri;}
+	
+	#ajouter .text input,#ajouter fieldset select{width:100%;}
+	#ajouter #select_type select{width:95%;}
+	#ajouter .date .jour, #ajouter .heures .heure{width:25%;}
+	#ajouter .date .mois, #ajouter .heures .minute{width:25%;margin-left:3%;}
+	#ajouter .date .annee{width:35%;margin-left:3%;}
+	
+	
+/****************************************/
+
+/* PAGE DE LA LISTE */
+
+#liste{
+	width:100%;margin:auto;
+}
+	#liste #search{
+		width:50%;margin:auto;margin-top:5px;background:white;border-radius:5px;height:40px;
+		overflow:hidden;
+	}
+	#liste #search img, #liste #search input{
+		display:inline-block;vertical-align:top;height:100%;
+	}
+	#liste #search img{height:100%;}
+	#liste #search-text{
+		background:none;font:102% sans-serif;text-indent:15px;border:0;width:80%;
+	}
+	#liste #search-text:hover, #liste #search-text:focus{color:rgb(0,150,255);}
+	#liste #search-button{
+		background:white;border:0;border-left:2px solid gray;font:115% calibri;
+		float:right;cursor:pointer;
+	}
+	#liste #search-button:hover{background:gray;color:white;}
+
+	#results-search{
+		position:absolute;width:50%;background:white;z-index:1;
+		margin-left:25%;box-shadow: 0 0 2px black;
+	}
+	#results-search span{padding:5px 0 5px 30px;font:20px sans-serif;transition:all .3s ease;
+		display:block;cursor:pointer;}
+	#results-search span:hover{padding-left:45px;color:rgb(0,150,255);}
+
+	#liste fieldset{width:95%;margin:auto;overflow:hidden;}
+	#liste table{width:100%;}
+	#liste table td, #liste table th{padding-left:3px;}
+	#liste table td{padding:3px;transition:all .2s ease;}
+	#liste table th{
+		font:103% verdana;text-align:left;
+	}
+	#liste .id{color:rgb(0,150,255);}
+	#liste .id.tbody{font:bold 108% calibri;}
+	#liste tr.table-body:nth-child(2n+1) td{background:rgba(0,0,0,.2);}
+	#liste table tr.table-body:hover td{background:rgba(0,150,255,.5)!important;}
+	#liste table td.tbody{font:105% calibri;}
+	#liste tr:last-child td{border-top:3px solid rgb(0,150,255);}
+	#liste table .tbody.nom,#liste table .tbody.prenom{font-weight:bold;}
+	#liste table .dateNaissance,#liste table .dateEmbauche{font-style:italic!important;}
+	#liste .modifier img{width:20px;height:100%;cursor:pointer;}
+	#liste #actions td{height:25px;}
+	#liste #actions a{
+		text-decoration:none;color:black;font:100% sans-serif;cursor:default;
+		display:inline-block;background:darkgray;text-align:center;
+		padding:5px 8px;
+	}
+	#liste #actions a.active{cursor:pointer;background:rgba(0,150,255,.5);}
+	#liste #actions a.active:hover{color:white;}
+	#liste #actions div{position:absolute;margin-top:-15px;height:25px;overflow:hidden;
+		z-index:5;}
+	#abbr span{display:inline-block;padding:5px 10px;margin:5px;font:105% sans-serif;
+		background:darkgray;color:white;}
+
+	/* DIVISION DU CHOIX DE LA PERIODE */
+	.afficher-elmts{
+		position:fixed;z-index: 11;width:40%;height:auto;padding-bottom:5px;top:30%;left:30%;
+		box-shadow:0 0 3px black;background:white;transition:all .3s linear;
+		display:none;
+	}
+		.afficher-elmts #close{display:block;float:right;width:35px;height:35px;}
+		.afficher-elmts #close img{transform:rotate(45deg);width:100%;height:100%;}
+		.afficher-elmts #close:hover{background:rgb(0,150,255);}
+		.afficher-elmts h4{font:105% sans-serif;margin:10px 0;text-indent:5px;}
+
+		.afficher-elmts #affichage{display:none;max-height:380px;overflow-y:auto;}
+		.afficher-elmts #inset span{display:block;margin-top:10px;}
+		.afficher-elmts #inset span label{
+			display:inline-block;width:15%;font:105% sans-serif;text-indent:10px;
+		}
+		#afficher-conges span label{width:25%!important;}
+		#mois-recu span label{width:16%!important;}
+		#choix-periode select, #mois-recu select{
+			height:30px;font:110% calibri;width:80%;transition:all .2s ease;
+		border-style:solid;border-color:gray;}
+		#choix-periode select:hover, #mois-recu select:hover, 
+		#choix-periode select:focus, #mois-recu select:focus{
+			color:rgb(0,150,255);border-color:rgb(0,150,255);
+		}
+		#afficher-conges input[type="number"], #mois-recu input[type="number"]{
+			height:30px;font:105% calibri;-moz-appearance:textfield;border-style:solid;
+		border-color:gray;}
+		#afficher-conges input[type="number"]:hover, #mois-recu input[type="number"]:hover,
+		#afficher-conges input[type="number"]:focus, #mois-recu input[type="number"]:focus
+		{
+			color:rgb(0,150,255);border-color:rgb(0,150,255);-moz-appearance:number-input;}
+		#afficher-conges .jour,#afficher-conges .mois,
+		#mois-recu .jour,#mois-recu .mois{width:15%;}
+		#afficher-conges .annee{width:25%;}
+		#afficher-conges .mois,#mois-recu .mois,#afficher-conges .annee{margin-left:2%;}
+		.afficher-elmts #afficher,.afficher-elmts #generer{
+			border:0;transition:all .2s ease;padding:5px 0;font:110% sans-serif;
+			width:19.5%;background:rgb(0,150,255);float:right;margin-top:5px;margin-right:5%!important;
+		}
+		.afficher-elmts #afficher:hover,.afficher-elmts #generer:hover{color:white;}
+
+.afficher-elmts #charge{
+	height:100px;position:relative;display:none;
+}
+.afficher-elmts #charge .tourne{
+	display:block;width:30px;height:30px;border:6px solid transparent;animation-name: tourne;
+	border-radius:50%;position:absolute;animation-iteration-count: infinite;
+	animation-timing-function: linear;top:30%;margin-left:45%;
+}
+.afficher-elmts #charge #tourne1{border-left-color:rgb(0,150,255);animation-duration: 1.5s;}
+.afficher-elmts #charge #tourne2{border-top-color:rgba(0,180,255,.5);animation-duration: 1s;}
+@keyframes tourne{
+	from{ transform:rotate(0); }
+	to{ transform:rotate(360deg); }
+}
+.afficher-elmts #affichage>div{
+	border-bottom: 3px solid rgb(0,150,255);max-height: 205px;padding-bottom:3px;
+	margin-top:5px;overflow-y: auto;
+}
+	.afficher-elmts #affichage>div>div{max-height:180px;overflow-y:auto;}
+	.afficher-elmts #affichage h5{font:bold 100% arial;margin:3px 0;}
+	.afficher-elmts #affichage h6{text-align:center;font:italic bold 90% consolas;margin:3px 0;}
+	.afficher-elmts #affichage span{display:block;margin-left:20px;border-bottom:1px solid black;
+		margin-top:2px;padding:3px 0;}
+	.afficher-elmts #affichage label{font: 95% sans-serif;width:15%;display: inline-block;}
+	.afficher-elmts #affichage font{font: 95% sans-serif; color:rgb(0,150,255);}
+	.afficher-elmts #inset font{
+		display:block;width:100%;font:105% arial;color:red;text-align:center;
+	}
+
+/* 
+	PAGE D'ENREGISTREMENT DES HEURES + CONGES
+*/
+#heures,#conges{
+	width:100%;
+}
+	#heures>div, #conges>div{
+		display:inline-block;vertical-align:top;background:white;
+		padding:3px;
+	}
+	#heures #indications,#conges #indications{
+		width:28%;font:120% calibri;border-radius:15px;margin-top:10px;margin-left:5px;
+		height:150px;
+		margin-left:10px;
+	}
+	#heures #cadre,#conges #cadre{width:68%;margin-top:10px;margin-left:10px;
+		border-radius:5px;overflow:hidden;padding-top: 5px;}
+	#heures form span.elmt{display:block;height:35px;margin-top:10px;}
+	#heures form span.elmt label{
+		display:inline-block;width:25%;font:105% sans-serif;text-indent:10px;
+	}
+	#conges form label{display:block;width:100%;font:105% calibri;text-indent:5px;
+		margin-top:10px;}
+	#heures select, #heures input[type='number']{
+		border:2px solid gray;transition:all .2s ease;height:30px;
+		text-indent:15px;font:105% sans-serif;border-radius:5px;
+	}
+	#conges input[type='number']{
+		border:2px solid gray;transition:all .2s ease;height:30px;margin-left:3%;
+		text-indent:15px;font:105% sans-serif;border-radius:5px;
+	}
+	#conges .jour, #conges .mois{width:25%;}
+	#conges .annee{width:35%;}
+	#heures #jour, #heures #mois, #heures .heure, #heures .minutes{
+		width:15.5%;
+	}
+	#heures #annee{width:25%;}
+	#heures .text{text-align:center;color:red;font:105% sans-serif;}
+	#heures #blocs{margin-top:1em;}
+	{
+		display:inline-block;width:48%;margin-left:1%;
+		padding-bottom:10px;margin-bottom:10px;border:2px solid rgb(0,150,255);
+		background:radial-gradient(white,white,white,white,rgb(0,150,255));
+	}
+	#heures #blocs div,#conges form .bloc{
+		display:inline-block;width:48%;margin-left:1%;
+		padding-bottom:10px;margin-bottom:10px;
+		border-bottom:2px solid gray;background:rgb(0,0,0,.1);
+	}
+	#heures #blocs h3, #conges .bloc h3{text-align: center;margin:5px 0;color:rgb(0,150,255);}
+	#heures #blocs hr, #conges .bloc hr{width:80%;border:2px solid rgb(0,150,255);}
+	#heures #blocs input[type="checkbox"],#conges .bloc input[type="checkbox"]{
+		position:absolute;box-shadow:1px 1px 2px black;
+	}
+
+#recus .bloc{
+	display:inline-block;width:46%;margin:1em 0 1em 1%!important;
+	
+}
+#recus .bloc legend{
+	color:white;background:rgb(0,150,255);width:70%;height:1.5em;
+	font:1.5em comic sans ms;text-align:center;margin:auto;
+}
+#recus h4, #recus h5, #recus h6{margin:0 0 5px 0;padding:.3em 0;}
+#recus h4{font:1.3em impact;text-align:center;background:lightgray;}
+#recus h5{font:1em verdana;border-bottom:2px solid gray;text-indent:1em;}
+#recus h6{font:0.8em impact;text-align:center;}
+#recus .details{
+	box-shadow: 0 0 2px black;width:96%;margin:auto;border-radius:5px;overflow:hidden;
+	margin-bottom:5px;
+}
+#recus .details>span{
+	display:block;width:98%;margin:auto;margin-bottom:5px;
+}
+
+#recus .for-conges ul{font:1.1em calibri;}
+#recus .for-heures>div{max-height:22em;overflow-y:auto;}
+#recus .heure{
+	display:inline-block;width:48%;margin-left:1%;margin-bottom:5px;margin-top:5px;
+	border-bottom:2px solid rgb(0,150,255);
+}
+#recus .heure .compte-heure, #recus .heure span{display:block;font:1em sans-serif;}
+#recus .heure .compte-heure{display:block;font:1em sans-serif;}
+#recus .heure font{font-weight:bold;}
+#recus .heures-manquees b{color:rgb(0,150,255);}
+#recus .button{
+	float:right;background:rgb(0,150,255);border-radius:5px;
+	cursor:pointer;color:white;padding:5px 10px;font:1.1em sans-serif;
+	margin-right:5px;margin-bottom:5px;border:0;
+}
+#recus .button:hover{box-shadow: 0 0 2px black, 0 0 2px white inset;}

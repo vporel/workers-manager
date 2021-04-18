@@ -1,0 +1,80 @@
+/*
+* Style identique sur toutes les pages
+* ce style défini la disposition des grandes parties de la page
+*/
+
+/* IMPORTS */
+@import "header.css";
+@import "apropos.css";
+/**********/
+body{
+	margin:0;background:url(../images/fond.jpg) fixed ;background-size:cover;
+}
+
+#body{
+	width:100%;min-height:400px;
+}
+
+span#infos-page{
+	background:white;display:block;width:100%;padding:3px 0;height:30px;z-index:2;
+	text-indent:20px;font:120% calibri;color:darkgray;position:sticky;top:62px;
+}
+span#infos-page b{font-weight:bold;color:black;}
+span#infos-page #message{
+	position:fixed;display:block;padding:5px;color:red;font:bold 80% arial;
+	right:0;bottom:0;max-width:260px;border:2px solid red;transition:all .2s ease;
+	background:url('../images/warning-red.png') white no-repeat right bottom;
+	background-size:40px 40px;padding-right:43px;border-bottom-width:0;border-right-width: 0;
+}
+span#infos-page .button{
+		float:right;border:0;transition:all .2s ease;padding:5px 15px;border-radius:5px;
+		font:80% sans-serif;background:white;margin:0 5px;
+	}
+span#infos-page .button.submit{color:white;background:rgb(0,150,255);}
+span#infos-page .other{box-shadow: 0 0 1px black;}
+span#infos-page .button.other:hover{color:white;background:gray;}
+
+#liens{
+	margin:auto;margin-top:1%;width:70%;
+}
+#liens *{transition:all .2s ease;text-decoration: :none;}
+#liens div{
+	display:inline-block;width:35%;height:200px;margin-top:10px;margin-left:15px;
+	background:white;color:rgb(0,150,255);cursor:pointer;
+}
+#liens .at-left{margin-left:15%;}
+#liens div img, #liens div strong{display:block;}
+#liens div img{margin:auto;width:60%;height:70%;margin-top:5px;}
+#liens div strong{width:100%;font:130% arial;margin-top:15px;text-align:center;}
+#liens div:hover{background:rgb(0,150,255);}
+#liens div:hover strong{color:white;}
+#liens .quit-link{color:red;}
+#liens .quit-link:hover{background:red;}
+#liens .quit-link:hover strong{color:white;}
+
+/* Others pages */
+/*
+	Style permanent
+*/
+fieldset{
+	border:0;border-top:3px solid rgb(0,150,255);margin-top:5px!important;
+	margin-bottom:5px!important;background:white;border-radius:5px;
+}
+fieldset legend{
+	border:3px solid rgb(0,150,255);border-top:0;background:white;padding:5px 10px;
+	border-radius:30px;font:1.2em calibri;color:rgb(0,150,255);
+}
+/* FORMULAIRES */
+form input[type="text"], form input[type="number"], form select{
+	text-indent:15px;font:105% sans-serif;border:2px solid gray;transition:all .2s ease;
+	height:30px;border-radius:5px;
+}
+form select{text-indent:5px;}
+form input[type="text"]:hover, form inputinput[type="text"]:focus,
+form input[type="number"]:hover, form inputinput[type="number"]:focus,
+form select:hover, form select:focus{
+	border-color:rgb(0,150,255);color:rgb(0,150,255);
+}
+form input[type="number"]{-moz-appearance:textfield;}
+form input[type="number"]:hover,form input[type="number"]:focus
+		{-moz-appearance:number-input;}

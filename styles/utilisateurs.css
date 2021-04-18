@@ -1,0 +1,38 @@
+ #ajouter{width:50%;margin:auto;}
+	#ajouter fieldset span{display:inline-block;width:90%;margin-left:2%;margin-top:5px;}
+	#ajouter fieldset span label{display:block;width:100%;font:100% calibri;}
+	#ajouter .text input{width:100%;}
+	#ajouter .date .jour{width:25%;}
+	#ajouter .date .mois{width:25%;margin-left:3%;}
+	#ajouter .date .annee{width:35%;margin-left:3%;}
+	
+/* *****************************
+		LISTE 
+	************** */
+#liste{
+	width:50%;margin:auto;margin-top:20px;
+}
+	#liste table{
+		margin-top:5px;width:100%;
+	}
+	#liste table td{padding:3px;transition:all .2s ease;}
+	#liste table th{
+		border-bottom:3px solid rgb(0,150,255);font:115% sans-serif;
+	}
+	#liste .id{color:rgb(0,150,255);}
+	#liste .id.tbody{font:bold 108% calibri;border-right:3px solid rgb(0,150,255);}
+	#liste tr.table-body:nth-child(2n+1) td{background:rgba(0,0,0,.2);}
+	#liste table tr.table-body:hover td{background:rgba(0,150,255,.2);}
+	#liste table td.tbody{font:110% calibri;}
+	#liste table .tbody.username{padding-left:5px;font-weight:bold;}
+	#liste .modifier.tbody{background:rgba(0,0,0,.2)!important;}
+	#liste .modifier img{width:20px;height:100%;cursor:pointer;}
+
+	#liste #actions a{
+		text-decoration:underline;color:black;font:105% sans-serif;cursor:default;
+	}
+	#liste #actions a.active{color:blue;cursor:pointer;}
+	#liste #actions a.active:hover{color:rgb(0,150,255);}
+	#liste #message{
+		display:block;width:100%;font:105% arial;color:red;$
+	}
